@@ -89,8 +89,14 @@ const commands = {
 	'reboot': (msg) => {
 		if (msg.author.id == tokens.adminID) process.exit(); //Requires a node module like Forever to work.
 	},
-	'stop': (msg) => {
-		message.voiceChannel.leave();	
+	'ping': (msg) => {
+		  message.channel.send("**Pinging.**").then((message)=>{
+             message.edit("**Pinging..**")
+                message.edit("**Pinging...**")
+                     message.edit("**Pinging.**")
+                         message.edit("**Pinging..**")
+                             message.edit("**Pong!** " + "`" + bot.ping.toFixed() + "ms" + "`")});
+        message.channel.send("<a:pingball:394121326488584192>");
 	}
 };
 

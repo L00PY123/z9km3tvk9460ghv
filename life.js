@@ -90,9 +90,7 @@ const commands = {
 		if (msg.author.id == tokens.adminID) process.exit(); //Requires a node module like Forever to work.
 	},
 	'stop': (msg) => {
-		if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-    message.channel.send(":x: Stopped!");
-		
+		if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();		
 	}
 };
 
